@@ -1,23 +1,27 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-
-[dev-packages]
-flake8 = "*"
-flake8-docstrings = "*"
-jupyter = "*"
-pep8-naming = "*"
-pytest = "*"
-requests = "==2.25.1"
-joblib = "==1.0.1"
+name = "pypi"
 
 [packages]
-fastapi = "==0.63.0"
-pandas = "==1.1.5"
-uvicorn = "==0.13.3"
-joblib = "*"
-scikit-learn = "*"
+gensim = "==3.8.1"
+pyldavis = "==2.1.2"
+spacy = "==2.2.3"
+scikit-learn = "==0.22.2"
+seaborn = "==0.9.0"
+squarify = "==0.4.3"
+ipykernel = "*"
+nltk = "*"
+pandas = "*"
+scipy = "*"
+beautifulsoup4 = "*"
+matplotlib = "*"
+pandarallel = "==1.4.8"
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+spotipy = "*"
+
+[dev-packages]
 
 [requires]
-python_version = "3"
+python_version = "3.8"
