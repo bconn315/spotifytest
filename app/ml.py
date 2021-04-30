@@ -15,15 +15,15 @@ log = logging.getLogger(__name__)
 router = APIRouter()
 
 # Spotify credentials - this needs to be changed to environment variables
-SPOTIFY_API_KEY = getenv("SPOTIFY_API_KEY")
-SPOTIFY_API_KEY_SECRET = getenv("SPOTIFY_API_KEY_SECRET")
+SPOTIFY_API_KEY = 'b480cf11cde74d1b8d645b3f86f38d8b'
+SPOTIFY_API_KEY_SECRET = 'd0ed275c85fe48e19bf016c90d83221d'
 
 # load an instance of the spotipy class
 sp = spotipy.Spotify(auth_manager=SpotifyClientCredentials(client_id=SPOTIFY_API_KEY,
                                                            client_secret=SPOTIFY_API_KEY_SECRET))
 
 # load our knn model
-classifier = load("app/knn_model.joblib")
+classifier = load("knn_model.joblib")
 
 # provided scaffolding class
 class Item(BaseModel):
